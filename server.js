@@ -39,7 +39,7 @@ db.once('open', function() {
 
 // And we bring in our Note and Article models
 var Note = require('./models/Note.js');
-var Article = require('./models/Article.js');
+var Article = require('./models/article.js');
 
 
 // Routes
