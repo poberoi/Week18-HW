@@ -4,26 +4,26 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // Create article schema
-var articleSchema = new Schema({
+var ArticleSchema = new Schema({
   // title is required
   title: {
     type:String,
     required:true
   },
   // link is required
-  summary: {
+  link: {
     type:String,
     required:true
   },
   // this only saves one note's ObjectId. ref refers to the Note model.
   note: {
       type: Schema.Types.ObjectId,
-      ref: 'Comment'
+      ref: 'Note'
   }
 });
 
-// Create the article model with the articleSchema
-var article = mongoose.model('Article', articleSchema);
+// Create the Article model with the ArticleSchema
+var Article = mongoose.model('Article', ArticleSchema);
 
 // export the model
-module.exports = article;
+module.exports = Article;
